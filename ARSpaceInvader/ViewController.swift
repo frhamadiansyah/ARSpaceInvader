@@ -25,7 +25,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         sceneView.showsNodeCount = true
         
         // Load the SKScene from 'Scene.sks'
-        if let scene = SKScene(fileNamed: "Scene") {
+        if let scene = SKScene(fileNamed: "StartGameScene") {
             sceneView.presentScene(scene)
         }
     }
@@ -51,10 +51,13 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        let labelNode = SKLabelNode(text: "👾")
-        labelNode.horizontalAlignmentMode = .center
-        labelNode.verticalAlignmentMode = .center
-        return labelNode;
+        var node: SKNode?
+        if let anchor = anchor as? Anchor {
+            if let type : SKNode = anchor.sprite{
+              node = type
+          }
+        }
+        return node
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

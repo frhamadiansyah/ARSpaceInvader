@@ -16,6 +16,13 @@
 		7527E0D924B021E900DA2F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7527E0D724B021E900DA2F41 /* LaunchScreen.storyboard */; };
 		7527E0E424B021E900DA2F41 /* ARSpaceInvaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7527E0E324B021E900DA2F41 /* ARSpaceInvaderTests.swift */; };
 		7527E0EF24B021E900DA2F41 /* ARSpaceInvaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7527E0EE24B021E900DA2F41 /* ARSpaceInvaderUITests.swift */; };
+		75AD586524B05B260012278F /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD586424B05B260012278F /* Anchor.swift */; };
+		75AD586824B091030012278F /* sfx_weapon_shotgun1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75AD586724B091030012278F /* sfx_weapon_shotgun1.wav */; };
+		75AD586A24B0EF490012278F /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75AD586924B0EF490012278F /* GameOverScene.sks */; };
+		75AD586C24B0EF8D0012278F /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD586B24B0EF8D0012278F /* GameOverScene.swift */; };
+		75AD586E24B0F4B40012278F /* SpriteLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD586D24B0F4B40012278F /* SpriteLibrary.swift */; };
+		75D639FC24B0F84B0076BC90 /* StartGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D639FB24B0F84B0076BC90 /* StartGameScene.swift */; };
+		75D639FE24B0F9910076BC90 /* StartGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 75D639FD24B0F9910076BC90 /* StartGameScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		7527E0EA24B021E900DA2F41 /* ARSpaceInvaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARSpaceInvaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7527E0EE24B021E900DA2F41 /* ARSpaceInvaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSpaceInvaderUITests.swift; sourceTree = "<group>"; };
 		7527E0F024B021E900DA2F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75AD586424B05B260012278F /* Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
+		75AD586724B091030012278F /* sfx_weapon_shotgun1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_weapon_shotgun1.wav; sourceTree = "<group>"; };
+		75AD586924B0EF490012278F /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		75AD586B24B0EF8D0012278F /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		75AD586D24B0F4B40012278F /* SpriteLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteLibrary.swift; sourceTree = "<group>"; };
+		75D639FB24B0F84B0076BC90 /* StartGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameScene.swift; sourceTree = "<group>"; };
+		75D639FD24B0F9910076BC90 /* StartGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartGameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +115,17 @@
 		7527E0C924B021E700DA2F41 /* ARSpaceInvader */ = {
 			isa = PBXGroup;
 			children = (
+				75AD586624B090E50012278F /* Sound */,
 				7527E0CA24B021E700DA2F41 /* AppDelegate.swift */,
 				7527E0CC24B021E700DA2F41 /* Scene.sks */,
 				7527E0CE24B021E700DA2F41 /* Scene.swift */,
+				75AD586424B05B260012278F /* Anchor.swift */,
+				75AD586D24B0F4B40012278F /* SpriteLibrary.swift */,
 				7527E0D024B021E700DA2F41 /* ViewController.swift */,
+				75AD586924B0EF490012278F /* GameOverScene.sks */,
+				75AD586B24B0EF8D0012278F /* GameOverScene.swift */,
+				75D639FB24B0F84B0076BC90 /* StartGameScene.swift */,
+				75D639FD24B0F9910076BC90 /* StartGameScene.sks */,
 				7527E0D224B021E700DA2F41 /* Main.storyboard */,
 				7527E0D524B021E900DA2F41 /* Assets.xcassets */,
 				7527E0D724B021E900DA2F41 /* LaunchScreen.storyboard */,
@@ -129,6 +150,14 @@
 				7527E0F024B021E900DA2F41 /* Info.plist */,
 			);
 			path = ARSpaceInvaderUITests;
+			sourceTree = "<group>";
+		};
+		75AD586624B090E50012278F /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				75AD586724B091030012278F /* sfx_weapon_shotgun1.wav */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +264,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AD586824B091030012278F /* sfx_weapon_shotgun1.wav in Resources */,
 				7527E0CD24B021E700DA2F41 /* Scene.sks in Resources */,
 				7527E0D924B021E900DA2F41 /* LaunchScreen.storyboard in Resources */,
 				7527E0D624B021E900DA2F41 /* Assets.xcassets in Resources */,
+				75D639FE24B0F9910076BC90 /* StartGameScene.sks in Resources */,
+				75AD586A24B0EF490012278F /* GameOverScene.sks in Resources */,
 				7527E0D424B021E700DA2F41 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AD586E24B0F4B40012278F /* SpriteLibrary.swift in Sources */,
+				75AD586C24B0EF8D0012278F /* GameOverScene.swift in Sources */,
 				7527E0D124B021E700DA2F41 /* ViewController.swift in Sources */,
 				7527E0CF24B021E700DA2F41 /* Scene.swift in Sources */,
+				75D639FC24B0F84B0076BC90 /* StartGameScene.swift in Sources */,
+				75AD586524B05B260012278F /* Anchor.swift in Sources */,
 				7527E0CB24B021E700DA2F41 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
